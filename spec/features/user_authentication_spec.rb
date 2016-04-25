@@ -18,7 +18,7 @@ feature 'User Authentication' do
     click_button 'Signup'
 
     expect(page).to have_text('Thank you for signing up Bob')
-    expect(page).to have_text('Signed in as BobbyLite')
+    expect(page).to have_text('Signed in as bob@smith.com')
   end
 
   scenario 'allows existing users to login' do
@@ -35,6 +35,6 @@ feature 'User Authentication' do
 
     click_button 'Login'
 
-    expect(page).to have_text("Logged in as #{user.email.titleize}")
+    expect(page).to have_text("Signed in as #{user.first_name.titleize}")
   end
 end
