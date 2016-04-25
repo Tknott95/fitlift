@@ -15,4 +15,7 @@ Rails.application.routes.draw do
 
   get 'users/:id' => 'users#show'
 
+  get 'about' => 'main#about'
+  get 'contact' => 'main#contact'
+
 end
