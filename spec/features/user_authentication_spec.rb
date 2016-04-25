@@ -8,7 +8,6 @@ feature 'User Authentication' do
 
     click_link 'Signup'
 
-    fill_in 'Username', with: 'BobbyLite'
     fill_in 'First name', with: 'bob'
     fill_in 'Last name', with: 'smith'
     fill_in 'Email', with: 'bob@smith.com'
@@ -36,5 +35,6 @@ feature 'User Authentication' do
     click_button 'Login'
 
     expect(page).to have_text("Signed in as #{user.first_name.titleize}")
+
   end
 end
