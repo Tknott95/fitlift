@@ -20,4 +20,21 @@ feature 'User Authentication' do
     expect(page).to have_text('Thank you for signing up Bob')
     expect(page).to have_text('Signed in as BobbyLite')
   end
+
+  scenario 'allows existing users to login' do
+    user = FactoryGirl.create(:user)
+
+    visit '/'
+
+    expect(page).to have_link('Login')
+
+    click_link('Login')
+
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
+
+    click_button 'Login'
+
+    expect(page).to have_text("Logged in as #{user.email.titleize}")
+  end
 end
