@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:id] = @user.id
-      redirect_to root_path,
+      redirect_to current_path,
         notice: "Thank you for signing up #{@user.first_name.titlecase}"
     else
       render :new

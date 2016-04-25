@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       #User provided a valid password
       sessiion[:id] = user.id
-      redirect_to root_path,
+      redirect_to current_path,
         notice: "Welcome back #{user.first_name.titleize}"
     else
       flash[:error] = 'Invalid email or password'
