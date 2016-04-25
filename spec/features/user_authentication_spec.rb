@@ -18,6 +18,6 @@ feature 'User Authentication' do
     click_button 'Signup'
 
     expect(page).to have_text('Thank you for signing up Bob')
-    expect(page).to have_text('Signed in as bob@smith.com')
+    expect(page).to have_text('Signed in as BobbyLite')
   end
 end
