@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   delete '/logout',
     to: 'sessions#destroy'
 
-  get 'users/:id' => 'users#show'
+  get 'users/:id' => 'users#show', :as => 'user_profile'
 
   get 'about' => 'main#about'
   get 'contact' => 'main#contact'
