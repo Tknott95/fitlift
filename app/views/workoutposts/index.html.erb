@@ -1,0 +1,39 @@
+<div class="page-header">
+  <%= link_to new_workoutpost_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Workoutpost
+  <% end %>
+  <h1>Listing workoutposts</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Body part</th>
+            <th>Duration</th>
+            <th>Name of workout</th>
+            <th>Description of workout</th>
+            <th>Reps</th>
+            <th>Sets</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @workoutposts) do |workoutpost| %>
+            <td><%= workoutpost.body_part %></td>
+            <td><%= workoutpost.duration %></td>
+            <td><%= workoutpost.name_of_workout %></td>
+            <td><%= workoutpost.description_of_workout %></td>
+            <td><%= workoutpost.reps %></td>
+            <td><%= workoutpost.sets %></td>
+            <td><%= link_to 'Show', workoutpost %></td>
+        <td><%= link_to 'Edit', edit_workoutpost_path(workoutpost) %></td>
+        <td><%= link_to 'Destroy', workoutpost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :workoutposts
   root 'main#index'
 
   resources :users,
