@@ -1,0 +1,56 @@
+<%= form_for(@workoutpost, html: { class: "form-horizontal", role: "form" }) do |f| %>
+  <% if @workoutpost.errors.any? %>
+    <div class="alert alert-danger alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <h4><%= pluralize(@workoutpost.errors.count, "error") %> prohibited this workoutpost from being saved:</h4>
+
+      <ul>
+      <% @workoutpost.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :body_part, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :body_part, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :duration, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :duration, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :name_of_workout, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :name_of_workout, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :description_of_workout, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :description_of_workout, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :reps, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :reps, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :sets, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :sets, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
