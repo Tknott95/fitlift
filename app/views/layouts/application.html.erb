@@ -28,6 +28,10 @@
           <span class="icon-bar"></span>
         </button>
         <%= link_to "FitLift", "/", class: "navbar-brand" %>
+        <% if admin? %>
+          <%= link_to 'Admin Page', admin_root_path, class: "navbar-brand" %>
+        <% end %>
+
         <% if current_user %>
           Signed in as <%= current_user.email%>
           <%= link_to "#{current_user.first_name}", user_profile_path(current_user), class: "navbar-brand active" %>
