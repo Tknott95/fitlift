@@ -19,7 +19,8 @@ Rails.application.routes.draw do
   get 'contact' => 'main#contact'
 
 
-  resources :workouts
+  get 'workouts/new' => 'workouts#new'
   get 'workouts' => 'workouts#index'
+  get 'workouts/show/:workouts_id' => 'workouts#show', :as => 'show_workout'
 
 end

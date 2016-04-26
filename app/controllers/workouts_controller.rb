@@ -1,10 +1,11 @@
 class WorkoutsController < ApplicationController
 
-  def index
+def index
     @workouts = Workout.all
   end
 
   def show
+    @workout = User.find(params[:workout_id])
   end
 
   def new
@@ -15,6 +16,7 @@ class WorkoutsController < ApplicationController
     @workout = Workout.new(workout_params)
 
     if @workout.save
+      session[:workout_id] = @workout.id
       redirect_to user_profile_path(current_user),
       notice: "Thank you for posting your workout #{@user.first_name.titlecase}"
     else
@@ -40,7 +42,5 @@ class WorkoutsController < ApplicationController
     )
   end
 
-  def find_workout
-  end
 
 end
