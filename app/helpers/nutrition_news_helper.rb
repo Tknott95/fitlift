@@ -1,0 +1,2 @@
+module NutritionNewsHelper
+end
