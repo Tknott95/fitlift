@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'administrate', '~> 0.0.2'
 gem 'bootstrap-generators'
 gem 'gravatar_for'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
