@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'google-search'
 gem 'administrate', '~> 0.0.2'
 gem 'bootstrap-generators'
 gem 'gravatar_for'

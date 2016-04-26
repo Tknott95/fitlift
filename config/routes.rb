@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'news/index'
+
   namespace :admin do
     DashboardManifest::DASHBOARDS.each do |dashboard_resource|
       resources dashboard_resource
@@ -31,5 +33,7 @@ Rails.application.routes.draw do
   get 'workouts/new' => 'workouts#new'
   get 'workouts' => 'workouts#index'
   get 'workouts/show/:workouts_id' => 'workouts#show', :as => 'show_workout'
+
+  get 'new' => 'news#index'
 
 end
