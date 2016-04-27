@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'httparty'
 gem 'google-search'
 gem 'administrate', '~> 0.0.2'
 gem 'bootstrap-generators'
@@ -45,14 +46,13 @@ group :development, :test do
   gem 'capybara'
   gem 'faker'
   gem 'bcrypt'
-  gem 'sqlite3'
   gem 'shoulda-matchers'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
+  gem 'sqlite3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end

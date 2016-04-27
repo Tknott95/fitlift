@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'recipes/index'
+
   get 'nutrition_news/index'
 
   get 'news/index'
