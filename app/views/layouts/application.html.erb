@@ -33,7 +33,6 @@
         <% end %>
 
         <% if current_user %>
-          Signed in as <%= current_user.email%>
           <%= link_to "#{current_user.first_name}", user_profile_path(current_user), class: "navbar-brand active" %>
           <%= link_to 'Logout', logout_path, method: :delete, class: "navbar-brand navbar-right" %>
         <% else %>
@@ -46,7 +45,7 @@
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
           <li><a href="/contact">Contact</a></li>
-          <li><a href="workoutposts">New Workout</a></li>
+          <li><a href="/workoutposts">New Workout</a></li>
           <li><a href="/news/index">Fitness News</a></li>
           <li><a href="/nutrition_news/index">Nutrition News</a></li>
         </ul>
