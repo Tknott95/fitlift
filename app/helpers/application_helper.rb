@@ -6,9 +6,4 @@ module ApplicationHelper
     image_tag(gravatar_url, alt: user.username, class: "img-circle")
   end
 
-  def admin?
-    current_user.email == "tknott95@hotmail.com"
-    # I made up the line above. Implement your own checks according to your setup
-  end
-
 end
