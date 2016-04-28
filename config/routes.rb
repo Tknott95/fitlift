@@ -40,4 +40,6 @@ Rails.application.routes.draw do
 
   get 'new' => 'news#index'
 
+  get 'video' => 'video#index'
+
 end
