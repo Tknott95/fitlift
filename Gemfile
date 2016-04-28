@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bcrypt'
 gem 'httparty'
 gem 'google-search'
 gem 'administrate', '~> 0.0.2'
@@ -45,7 +46,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'faker'
-  gem 'bcrypt'
   gem 'shoulda-matchers'
 end
 

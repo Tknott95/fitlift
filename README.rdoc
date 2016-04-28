@@ -1,11 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an interactive fitness web application created as a project for The Davinci Institute
 
-Things you may want to cover:
+MyWorkoutBuddy:
 
-* Ruby version
+* Workouts by bodypart
 
 * System dependencies
 
