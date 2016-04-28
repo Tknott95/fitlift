@@ -42,4 +42,6 @@ Rails.application.routes.draw do
 
   get 'video' => 'video#index'
 
+  get 'chest' => 'main#chest'
+
 end
