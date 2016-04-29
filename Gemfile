@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+
+gem 'omniauth-twitter'
+gem 'omniauth-github'
 gem 'bcrypt'
 gem 'httparty'
 gem 'google-search'
@@ -47,6 +50,7 @@ group :development, :test do
   gem 'capybara'
   gem 'faker'
   gem 'shoulda-matchers'
+  gem 'dotenv-rails'
 end
 
 group :development do
