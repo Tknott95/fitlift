@@ -42,4 +42,10 @@ Rails.application.routes.draw do
 
   get 'video' => 'video#index'
 
+  get 'chest' => 'main#chest'
+  get 'arms' => 'main#arms'
+  get 'back' => 'main#back'
+  get 'cardio' => 'main#cardio'
+  get 'legs' => 'main#legs'
+
 end
