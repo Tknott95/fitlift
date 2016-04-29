@@ -48,4 +48,7 @@ Rails.application.routes.draw do
   get 'cardio' => 'main#cardio'
   get 'legs' => 'main#legs'
 
+
+  get '/auth/:provider/callback', to: 'sessions#oauth'
+
 end
