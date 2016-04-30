@@ -4,7 +4,7 @@ class WorkoutpostsController < ApplicationController
   # GET /workoutposts
   # GET /workoutposts.json
   def index
-    @workoutposts = Workoutpost.order(params[:sort] + ' ' + params[:direction]).all
+    @workoutposts = Workoutpost.order(params[:sort]).all
   end
 
   # GET /workoutposts/1
