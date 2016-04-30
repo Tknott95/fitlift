@@ -4,7 +4,12 @@
 
 body {
   padding-top: $navbar-height + 10px;
-  background-image: url(war.png);
+  background-image: url(blue_bg_wp.png);
+}
+
+.jumbotron {
+  /* This is for ie8 and below */
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .page-header {
@@ -15,7 +20,9 @@ body {
   a.btn + a.btn {
     margin-right: 8px;
   }
+
 }
+
 
 input[type="radio"], input[type="checkbox"] {
   width: initial;
