@@ -1,4 +1,5 @@
 <div class="page-header"></div>
+<div class="jumbotron">
   <%= link_to workoutposts_path, class: 'btn btn-default' do %>
     <span class="glyphicon glyphicon-list-alt"></span>
     Back
@@ -7,6 +8,7 @@
     <span class="glyphicon glyphicon-pencil"></span>
     Edit
   <% end %>
+
   <h1><%= @workoutpost.body_part %></h1>
 
 
@@ -30,3 +32,4 @@
   <dd><%= @workoutpost.sets %></dd>
 
 </dl>
+</div>
